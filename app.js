@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
 const connectDB = require('./DB/connect')
+const router = require('./routes/users')
 require('dotenv').config()
 
 app.use(express.json())
-
+app.use('/users',router)
 
 const port = 3000 
 
